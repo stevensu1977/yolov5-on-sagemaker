@@ -1,0 +1,10 @@
+#! /bin/bash
+hpfile=/opt/ml/input/config/hyperparameters.json
+echo "========hyperparameters======="
+cat $hpfile
+hp=$(cat $hpfile |jq -r -c 'to_entries | .[] |"--"+ .key + " " + .value ' | tr '\n' ' ')
+echo "============="
+echo python /opt/code/train.py $hp
+echo "============="
+python /opt/code/train.py $hp
+cp -r /opt/code/runs /opt/ml/model/
