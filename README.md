@@ -1,5 +1,5 @@
 # YOLOv5 on SageMaker
-本workshop演示使用YOLOv5在SageMaker上如何进行训练和推理。  
+本workshop演示使用YOLOv5在GCR ZHY region SageMaker上如何进行训练和推理。  
 YOLOv5官方地址：https://github.com/ultralytics/yolov5  
 YOLOv5是一个对象检测算法，可识别图片、视频里的对象。
 ![检测例子](images/detection_example.jpg)
